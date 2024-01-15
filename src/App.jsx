@@ -1,16 +1,41 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import Layout from "./components/Layout"
 import Home from './pages/Home'
 import Apropos from "./pages/Apropos"
+import FicheLogement from "./pages/FicheLogement"
+import PageError from "./pages/Error"
 import './styles/index.scss'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/about',
-    element: <Apropos />
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element : <Home />
+      },
+      {
+        path: 'home',
+        element : <Home />
+      },
+      {
+        path: 'about',
+        element : <Apropos />
+      },
+      {
+        path: 'ficheLogement',
+        children :[
+          {
+            path:':id',
+          element : <FicheLogement />,
+          }
+        ]
+      },
+      {
+        path: '*',
+        element: <PageError />
+      }
+    ]
   }
 ])
 

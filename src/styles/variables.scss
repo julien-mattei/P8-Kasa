@@ -1,0 +1,22 @@
+// Variables
+$main-color : #ff6060;
+$secondary-color : #FFFFFF;
+$bg-color-lightgrey : #f6f6f6;
+
+
+// Mixin
+
+
+// Placeholder
+%flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-row-center {
+    display: flex;
+    justify-content: center;
+}
+

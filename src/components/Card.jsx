@@ -1,7 +1,8 @@
-function Card ({id, title, cover}) {
-    return <li key={id}>
-            <img src={cover}/>{title}
-        </li>
+function Card ({ title, cover}) {
+    return <div className="card">
+            <img src={cover}></img>
+            <span>{title}</span>
+        </div>
 }
 
 export default Card

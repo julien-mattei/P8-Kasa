@@ -1,14 +1,16 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Banner from '../components/Banner'
 import CardsList from '../components/CardsList'
+import imageHome from '../assets/ImageHome.png'
+
+const txtHome = 'Chez vous, partout et ailleurs'
 
 function Home() {
     return <>
-        <Header />
-        <Banner />
+        <Banner 
+        image={imageHome}
+        texte = {txtHome}
+        />
         <CardsList />
-        <Footer />
     </>
         
 }

@@ -1,17 +1,18 @@
-import {logementList} from '../datas/LogementListe'
+import { Link, useParams } from 'react-router-dom'
+import LogementListe from '../datas/LogementListe'
 import Card from './Card'
 
 function CardsList () {
     return  <div className='liste-logement'>
-                <ul className='liste'>
-                    {logementList.map(({id, title, cover}) => (
-                    <Card 
-                         id = {id}
-                        title = {title}
-                        cover = {cover}
-                    />
-                    ))}
-                </ul>
+                {LogementListe.map(({id, title, cover}) => (
+                    <Link key={id} to={`../ficheLogement/${id}`}>
+                        <Card 
+                            key = {id}
+                            title = {title}
+                            cover = {cover}
+                        />
+                    </Link>
+                ))}    
         </div>
 }
 

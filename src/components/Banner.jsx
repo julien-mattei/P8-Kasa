@@ -1,10 +1,10 @@
-import background from '../assets/Background.png'
-
-function Banner () {
-    return <div className="banniere">
-        <img src={background}/>
-        <span>Chez vous, partout et ailleurs</span>
-    </div>
+function Banner ({image, texte}) {
+    return <>
+        <div className="banniere">
+            <img src={image}/>
+            <span>{texte}</span>
+        </div>
+    </>
 }
 
 export default Banner
