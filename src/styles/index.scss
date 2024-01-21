@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import './variables.scss';
 
-// Composants
+// General
 html {
     width:1440px;
     gap: 30px;
@@ -11,7 +11,7 @@ html {
 
 #root {
     @extend %flex-column;
-    gap: 30px;
+    gap: 50px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +20,8 @@ main {
     gap: 30px;
 }
 
-footer {
+// Layout
+.footer {
     padding: 25px 0;
     width: 100%;
     background-color: black;
@@ -51,6 +52,7 @@ footer {
     
 }
 
+// Banner
 .banniere {
     width: 1240px;
     height: 223px;
@@ -73,6 +75,7 @@ footer {
     }
 }
 
+// Card CardList
 .liste-logement {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +89,6 @@ footer {
     .card {
         height: 340px;
         width: 340px;
-        
         position: relative;
 
         img {
@@ -107,11 +109,13 @@ footer {
     }
 }
 
+// Collapse
 .collapse-title {
     width: 1000px;
     height: 50px;
     background-color: $main-color;
     color: $secondary-color;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -124,7 +128,7 @@ button {
     background-color: #ff6060;
 }
 
-.down {
+.down, .up {
     filter:invert(100%);
     height: 30px;
 }
@@ -141,9 +145,14 @@ button {
     width: 1040px;
     height: 150px;
     transition : height 0.5s;
+    font-size: 18px;
+    color: $main-color;
+    border-radius: 5px;
+    
 
     p {
         margin: 0;
+        padding: 10px;
     }
 }
 
@@ -157,17 +166,23 @@ button {
     }
     .info, .infoplus {
         width: 570px;
+        
     }
     
 }
 
+// FicheLogement
 .general {
     display:flex;
     justify-content: space-between;
     color: $main-color;
     width: 1240px;
 }
-
+.fiche-logement {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .info-logement {
     display: flex;
     flex-direction: column;
@@ -183,4 +198,61 @@ button {
     height: 65px;
     width: 65px;
 }
+
+// SlideShow
+.slideshow {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    
+}
+
+.slide-hidden{
+    display: none;
+
+}
+
+.left-button {
+    position: absolute;
+    top: 40%;
+    right: 95%;
+    background-color: transparent;
+}
+
+.right-button {
+    position: absolute;
+    top: 40%;
+    left: 95%;
+    background-color: transparent;
+}
+.number {
+    position: absolute;
+    right: 50%;
+    top: 90%;
+    color: $secondary-color;
+    font-size: 18px;
+}
+
+
+// Tag
+.tags-logement {
+    display: flex;
+    gap: 20px;
+    
+}
+.tag-logement {
+    background-color: $main-color;
+    color: $secondary-color;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 2px 20px;
+}
+
 
