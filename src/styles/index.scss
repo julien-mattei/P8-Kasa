@@ -7,17 +7,19 @@ html {
     gap: 30px;
     margin: auto;
     @extend %flex-row-center;
+
+
 }
 
 #root {
     @extend %flex-column;
-    gap: 50px;
     font-family: 'Montserrat', sans-serif;
 }
 
 main {
     @extend %flex-column;
-    gap: 30px;
+    gap: 50px;
+    margin: 50px 0 50px;
 }
 
 // Layout
@@ -39,7 +41,13 @@ main {
     display: flex;
     justify-content: space-between;
     width: 1240px;
-    padding: 50px 110px;
+    padding: 40px 110px 0;
+    
+
+    @media (max-width: 767.98px) {
+        padding: 50px 0;
+    }
+
     nav {
         display: flex;
         gap: 30px;
@@ -49,6 +57,10 @@ main {
         color: $main-color;
         text-decoration: none;
     }
+    .active {
+        text-decoration: underline;
+    }
+
     
 }
 
@@ -152,10 +164,18 @@ button {
 
     p {
         margin: 0;
-        padding: 10px;
+        padding: 20px;
     }
 }
+.ul-equipments {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
 
+    li{
+        padding:2px 0;
+    }
+}
 .collapses-logement {
     display: flex;
     justify-content: space-between;
@@ -164,11 +184,13 @@ button {
     .collapse-title {
         width: 530px;
     }
-    .info, .infoplus {
+    .info {
         width: 570px;
-        
     }
-    
+    .infoplus {
+        width: 570px;
+        height: 279px;
+    }
 }
 
 // FicheLogement
@@ -255,4 +277,25 @@ button {
     padding: 2px 20px;
 }
 
+// Error
 
+.error {
+    @extend %flex-column;
+    gap: 139px;
+    color: $main-color;
+    padding: 139px 0;
+
+    a {
+        color: $main-color;
+        font-size: 18px;
+    }
+}
+.error-title {
+    font-size: 288px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.error-text {
+    font-size: 48px;
+}

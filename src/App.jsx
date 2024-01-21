@@ -23,13 +23,9 @@ const router = createBrowserRouter([
         element : <Apropos />
       },
       {
-        path: 'ficheLogement',
-        children :[
-          {
-            path:':id',
-           element : <FicheLogement />,
-          }
-        ]
+        path: 'ficheLogement/:id',
+        element : <FicheLogement />,
+        errorElement : <PageError />
       },
       {
         path: '*',

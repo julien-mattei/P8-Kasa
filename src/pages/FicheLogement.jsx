@@ -5,13 +5,14 @@ import Tag from "../components/Tag"
 import SlideShow from "../components/SlideShow"
 import star from "../assets/star.png"
 
+
 function FicheLogement () {
 
     const {id} = useParams()
     const currentLogement = logementListe.find((logements) => logements.id === id)
 
     
-
+  
     return <div className="fiche-logement">
         <SlideShow data={currentLogement.pictures} total={currentLogement.pictures.length} />
         
@@ -44,7 +45,7 @@ function FicheLogement () {
         </div>
         <div className="collapses-logement">
             <Collapse name = 'Description'  description={currentLogement.description}/>
-            <Collapse name='Équipements' description={currentLogement.equipments}/>
+            <Collapse name='Équipements' data={currentLogement.equipments}/>
         </div>
     
     </div>
