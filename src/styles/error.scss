@@ -1,0 +1,24 @@
+@import "./index.scss";
+@import "./variables.scss";
+
+.error {
+    @extend %flex-column;
+    gap: 139px;
+    color: $main-color;
+    padding: 139px 0;
+}
+
+.error-title {
+    font-size: 288px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.error-text {
+    font-size: 48px;
+}
+
+.error-redirect {
+    color: $main-color;
+    font-size: 18px;
+}

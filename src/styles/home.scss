@@ -1,0 +1,57 @@
+@import "./index.scss";
+@import "./variables.scss";
+
+.banniere {
+    width: 1240px;
+    height: 223px;
+    position: relative;
+    @extend %flex-row-center;
+    
+
+    img {
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+       filter: contrast(50%);
+    }
+
+    span {
+        position: absolute;
+        top: 35%;
+        color: $secondary-color;
+        font-size: 48px;
+    }
+}
+
+.liste-logement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1240px;
+    background-color: $bg-color-lightgrey;
+    border-radius: 25px;
+    gap: 50px 5px;
+    padding: 56px 0;
+
+    .card {
+        height: 340px;
+        width: 340px;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        span {
+            position: absolute;
+            padding-right: 50px;
+            top: 85%;
+            left: 5%;
+            color: $secondary-color;
+            font-size: 18px;
+        }
+    }
+}

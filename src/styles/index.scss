@@ -2,18 +2,26 @@
 @import './variables.scss';
 
 // General
-html {
+body {
     width:1440px;
     gap: 30px;
     margin: auto;
     @extend %flex-row-center;
 
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: auto;
+    }
 
 }
 
 #root {
     @extend %flex-column;
     font-family: 'Montserrat', sans-serif;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 main {
@@ -35,6 +43,10 @@ main {
     img {
         height: 50px;
     }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .header {
@@ -44,8 +56,9 @@ main {
     padding: 40px 110px 0;
     
 
-    @media (max-width: 767.98px) {
-        padding: 50px 0;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px 20px 0 20px;
     }
 
     nav {
@@ -62,240 +75,4 @@ main {
     }
 
     
-}
-
-// Banner
-.banniere {
-    width: 1240px;
-    height: 223px;
-    position: relative;
-    @extend %flex-row-center;
-    
-
-    img {
-        width: 100%;
-        border-radius: 25px;
-        object-fit: cover;
-       filter: contrast(50%);
-    }
-
-    span {
-        position: absolute;
-        top: 35%;
-        color: $secondary-color;
-        font-size: 48px;
-    }
-}
-
-// Card CardList
-.liste-logement {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 1240px;
-    background-color: $bg-color-lightgrey;
-    border-radius: 25px;
-    gap: 50px 5px;
-    padding: 56px 0;
-
-    .card {
-        height: 340px;
-        width: 340px;
-        position: relative;
-
-        img {
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        span {
-            position: absolute;
-            padding-right: 50px;
-            top: 85%;
-            left: 5%;
-            color: $secondary-color;
-            font-size: 18px;
-        }
-    }
-}
-
-// Collapse
-.collapse-title {
-    width: 1000px;
-    height: 50px;
-    background-color: $main-color;
-    color: $secondary-color;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    padding: 0 20px;
-    justify-content: space-between;
-}
-
-button {
-    border: none;
-    background-color: #ff6060;
-}
-
-.down, .up {
-    filter:invert(100%);
-    height: 30px;
-}
-
-.info {
-    background-color: $bg-color-lightgrey;
-    width: 1040px;
-    height: 0px;
-    transition: height 0.5s;
-}
-
-.infoplus {
-    background-color: $bg-color-lightgrey;
-    width: 1040px;
-    height: 150px;
-    transition : height 0.5s;
-    font-size: 18px;
-    color: $main-color;
-    border-radius: 5px;
-    
-
-    p {
-        margin: 0;
-        padding: 20px;
-    }
-}
-.ul-equipments {
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
-
-    li{
-        padding:2px 0;
-    }
-}
-.collapses-logement {
-    display: flex;
-    justify-content: space-between;
-    width: 1240px;
-
-    .collapse-title {
-        width: 530px;
-    }
-    .info {
-        width: 570px;
-    }
-    .infoplus {
-        width: 570px;
-        height: 279px;
-    }
-}
-
-// FicheLogement
-.general {
-    display:flex;
-    justify-content: space-between;
-    color: $main-color;
-    width: 1240px;
-}
-.fiche-logement {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.info-logement {
-    display: flex;
-    flex-direction: column;
-    width: 1240px;
-}
-
-.info-host {
-    display: flex;
-}
-
-.pic-host {
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-}
-
-// SlideShow
-.slideshow {
-    position: relative;
-    width: 1240px;
-    height: 415px;
-    
-}
-.slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    
-}
-
-.slide-hidden{
-    display: none;
-
-}
-
-.left-button {
-    position: absolute;
-    top: 40%;
-    right: 95%;
-    background-color: transparent;
-}
-
-.right-button {
-    position: absolute;
-    top: 40%;
-    left: 95%;
-    background-color: transparent;
-}
-.number {
-    position: absolute;
-    right: 50%;
-    top: 90%;
-    color: $secondary-color;
-    font-size: 18px;
-}
-
-
-// Tag
-.tags-logement {
-    display: flex;
-    gap: 20px;
-    
-}
-.tag-logement {
-    background-color: $main-color;
-    color: $secondary-color;
-    border-radius: 50px;
-    font-size: 14px;
-    padding: 2px 20px;
-}
-
-// Error
-
-.error {
-    @extend %flex-column;
-    gap: 139px;
-    color: $main-color;
-    padding: 139px 0;
-
-    a {
-        color: $main-color;
-        font-size: 18px;
-    }
-}
-.error-title {
-    font-size: 288px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.error-text {
-    font-size: 48px;
 }

@@ -1,0 +1,156 @@
+@import "./index.scss";
+@import "./variables.scss";
+
+.general {
+    display:flex;
+    justify-content: space-between;
+    color: $main-color;
+    width: 1240px;
+}
+.fiche-logement {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.info-logement {
+    display: flex;
+    flex-direction: column;
+    width: 1240px;
+}
+
+.info-host {
+    display: flex;
+}
+
+.pic-host {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+}
+
+// SlideShow
+.slideshow {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    
+}
+
+.slide-hidden{
+    display: none;
+
+}
+
+.left-button {
+    position: absolute;
+    top: 40%;
+    right: 95%;
+    background-color: transparent;
+}
+
+.right-button {
+    position: absolute;
+    top: 40%;
+    left: 95%;
+    background-color: transparent;
+}
+.number {
+    position: absolute;
+    right: 50%;
+    top: 90%;
+    color: $secondary-color;
+    font-size: 18px;
+}
+
+
+// Tag
+.tags-logement {
+    display: flex;
+    gap: 20px;
+    
+}
+.tag-logement {
+    background-color: $main-color;
+    color: $secondary-color;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 2px 20px;
+}
+
+.collapse-title {
+    width: 1000px;
+    height: 50px;
+    background-color: $main-color;
+    color: $secondary-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background-color: #ff6060;
+}
+
+.down, .up {
+    filter:invert(100%);
+    height: 30px;
+}
+
+.info {
+    background-color: $bg-color-lightgrey;
+    width: 1040px;
+    height: 0px;
+    transition: height 0.5s;
+}
+
+.infoplus {
+    background-color: $bg-color-lightgrey;
+    width: 1040px;
+    height: 150px;
+    transition : height 0.5s;
+    font-size: 18px;
+    color: $main-color;
+    border-radius: 5px;
+    
+
+    p {
+        margin: 0;
+        padding: 20px;
+    }
+}
+.ul-equipments {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+
+    li{
+        padding:2px 0;
+    }
+}
+.collapses-logement {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+
+    .collapse-title {
+        width: 530px;
+    }
+    .info {
+        width: 570px;
+    }
+    .infoplus {
+        width: 570px;
+        height: 279px;
+    }
+}

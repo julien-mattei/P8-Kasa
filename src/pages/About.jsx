@@ -1,10 +1,10 @@
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
 import imageAbout from '../assets/ImageAbout.png'
+import "../styles/about.scss"
 
-
-function Apropos() {
-    return <>
+function About() {
+    return <div className="about">
         <Banner image ={imageAbout}/>
         <Collapse 
         name ="Fiabilité" 
@@ -28,7 +28,7 @@ function Apropos() {
         locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
         également des ateliers sur la sécurité domestique pour nos hôtes."
         />
-    </>
+    </div>
 }
 
-export default Apropos
+export default About

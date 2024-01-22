@@ -4,7 +4,7 @@ import logementListe from "../datas/LogementListe.json"
 import Tag from "../components/Tag"
 import SlideShow from "../components/SlideShow"
 import star from "../assets/star.png"
-
+import "../styles/fichelogement.scss"
 
 function FicheLogement () {
 
