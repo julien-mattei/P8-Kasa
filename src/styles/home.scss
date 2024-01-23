@@ -7,12 +7,13 @@
     position: relative;
     @extend %flex-row-center;
     
-
     img {
         width: 100%;
         border-radius: 25px;
         object-fit: cover;
        filter: contrast(50%);
+
+     
     }
 
     span {
@@ -20,6 +21,17 @@
         top: 35%;
         color: $secondary-color;
         font-size: 48px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            padding-left: 16px;
+            top: 25%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: 111px;
+        width: 90%;
     }
 }
 
@@ -53,5 +65,18 @@
             color: $secondary-color;
             font-size: 18px;
         }
+
+        @media (max-width: 768px){
+            width: 98%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        padding: 0;
+        gap: 10px;
     }
 }

@@ -10,30 +10,39 @@ body {
 
     @media (max-width: 768px) {
         width: 100%;
-        margin: auto;
     }
 
 }
 
 #root {
     @extend %flex-column;
+    gap: 50px;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    
 
     @media (max-width: 768px) {
         width: 100%;
+        margin-top: 20px;
+        gap: 27px;
     }
 }
 
 main {
     @extend %flex-column;
-    gap: 50px;
-    margin: 50px 0 50px;
+    gap: 43px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        gap: 22px;
+    }
+
 }
 
 // Layout
 .footer {
     padding: 25px 0;
-    width: 100%;
+    width: 1440px;
     background-color: black;
     color: $secondary-color;
     @extend %flex-column;
@@ -53,18 +62,20 @@ main {
     display: flex;
     justify-content: space-between;
     width: 1240px;
-    padding: 40px 110px 0;
     
-
     @media (max-width: 768px) {
-        width: 100%;
-        padding: 20px 20px 0 20px;
+        width: 90%;
+        font-size: 12px;
     }
 
     nav {
         display: flex;
         gap: 30px;
         font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
     a {
         color: $main-color;
@@ -74,5 +85,10 @@ main {
         text-decoration: underline;
     }
 
+    .logo {
+        @media (max-width: 768px) {
+            width: 100px;
+        }
+    }
     
 }

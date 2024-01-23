@@ -5,20 +5,38 @@
     @extend %flex-column;
     gap: 139px;
     color: $main-color;
-    padding: 139px 0;
+    padding: 119px 0;
+
+    @media (max-width:768px) {
+        gap: 113px;
+        padding: 93px 0;
+    }
 }
 
 .error-title {
     font-size: 288px;
     font-weight: bold;
     margin: 0;
+
+    @media (max-width:768px) {
+        font-size: 96px;
+    }
 }
 
 .error-text {
     font-size: 48px;
+
+    @media (max-width:768px) {
+        font-size: 18px;
+        text-align: center;
+    }
 }
 
 .error-redirect {
     color: $main-color;
     font-size: 18px;
+
+    @media (max-width:768px) {
+       font-size: 14px;
+    }
 }

@@ -4,7 +4,7 @@ import imageAbout from '../assets/ImageAbout.png'
 import "../styles/about.scss"
 
 function About() {
-    return <div className="about">
+    return <>
         <Banner image ={imageAbout}/>
         <Collapse 
         name ="Fiabilité" 
@@ -28,7 +28,7 @@ function About() {
         locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
         également des ateliers sur la sécurité domestique pour nos hôtes."
         />
-    </div>
+    </>
 }
 
 export default About

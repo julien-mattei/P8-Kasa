@@ -3,8 +3,8 @@ import Collapse from "../components/Collapse"
 import logementListe from "../datas/LogementListe.json"
 import Tag from "../components/Tag"
 import SlideShow from "../components/SlideShow"
-import star from "../assets/star.png"
 import "../styles/fichelogement.scss"
+import Rating from "../components/Rating"
 
 function FicheLogement () {
 
@@ -31,16 +31,10 @@ function FicheLogement () {
             </div>
             <div>
                 <div className="info-host">
-                     <p>{currentLogement.host.name}</p>
-                        <img src={currentLogement.host.picture} alt="" className="pic-host"/>
+                    <p className="name-host">{currentLogement.host.name}</p>
+                    <img src={currentLogement.host.picture} alt="" className="pic-host"/>
                 </div>        
-                <div className="rating">
-                    <img src={star} alt="star" />
-                    <img src={star} alt="star" />
-                    <img src={star} alt="star" />
-                    <img src={star} alt="star" />
-                    <img src={star} alt="star" />
-                </div>
+                <Rating  rating={currentLogement.rating}/>
             </div>
         </div>
         <div className="collapses-logement">
