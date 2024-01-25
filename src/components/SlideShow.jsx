@@ -13,7 +13,7 @@ function SlideShow ({data, total}) {
     }
 
     return <div className="slideshow">
-        <button onClick={leftClick} className="left-button"><img src={left} alt={left} /></button>
+        <button onClick={leftClick} className="left-button"><img src={left} alt={left} className="left" /></button>
         {data.map((picture, index) => (
             <img 
             src={picture} 
@@ -22,7 +22,7 @@ function SlideShow ({data, total}) {
             className={click === index ? "slide" : "slide slide-hidden"}
             />
         ))}
-        <button onClick={rightClick} className="right-button"><img src={right} alt={right} /></button>
+        <button onClick={rightClick} className="right-button"><img src={right} alt={right} className="right" /></button>
         <span className="number">{click +1}/{total}</span>
     </div>
 }

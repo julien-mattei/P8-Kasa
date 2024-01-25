@@ -15,7 +15,6 @@ function Collapse ({name, description, data}){
             </div>
             <div  className={close ? "info" : "infoplus" }>
                {data ? <ul className="ul-equipments">{close ? "" : <>{data.map((equipements) => (<li key={equipements}>{equipements}</li>))}</>}</ul> : <p>{ close ? "" : description}</p>}
-               
             </div>
         </div>
         

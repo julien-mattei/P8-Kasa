@@ -92,3 +92,57 @@ main {
     }
     
 }
+
+.collapse-title {
+    background-color: $main-color;
+    color: $secondary-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 0 20px;
+    justify-content: space-between;
+
+    @media (max-width:768px) {
+        width: 88%;
+        font-size: 13px;
+        height: 30px;
+    }
+    
+}
+
+.info {
+    background-color: $bg-color-lightgrey;
+    transition: height 0.5s;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.infoplus {
+    background-color: $bg-color-lightgrey;
+    transition : height 0.5s;
+    font-size: 18px;
+    color: $main-color;
+    border-radius: 5px;
+
+    p {
+        margin: 0;
+        padding: 20px;
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 10px;
+            
+        }
+
+
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        font-size: 12px;
+        transition : height 0.5s;
+        height: 150px;
+    }
+}
