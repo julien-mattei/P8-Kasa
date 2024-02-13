@@ -9,7 +9,7 @@ import Rating from "../components/Rating"
 function FicheLogement () {
     const {id} = useParams()
     const currentLogement = logementListe.find((logements) => logements.id === id)
-
+    console.log('test')
     return <div className="fiche-logement">
         <SlideShow data={currentLogement.pictures} total={currentLogement.pictures.length} />
         <div className="general">

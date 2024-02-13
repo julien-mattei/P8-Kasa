@@ -11,8 +11,8 @@
         width: 100%;
         flex-direction: column;
     }
-    
 }
+
 .fiche-logement {
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@
         width: 90%;
     }
 }
+
 .info-logement {
     display: flex;
     flex-direction: column;
@@ -61,6 +62,7 @@
         justify-content: space-between;
     }
 }
+
 .info-host {
     display: flex;
     gap: 10px;
@@ -76,17 +78,20 @@
         height: 32px;
     }
 }
+
 .rating {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+
 .star{
     @media (max-width:768px) {
         width: 18px;
         height: 18px;
     }
 }
+
 // SlideShow
 .slideshow {
     position: relative;
@@ -97,8 +102,8 @@
         width: 100%;
         height: 255px;
     }
-    
 }
+
 .slide {
     width: 100%;
     height: 100%;
@@ -110,24 +115,24 @@
         height: 100%;
         object-fit: cover;
     }
-    
 }
 
 .slide-hidden{
     display: none;
 
 }
+
 .left, .right {
     @media (max-width:768px) {
         width: 20px;
     }
 }
+
 .left-button {
     position: absolute;
     top: 40%;
     right: 90%;
     background-color: transparent;
-
 }
 
 .right-button {
@@ -142,14 +147,18 @@
     top: 90%;
     color: $secondary-color;
     font-size: 18px;
+
+    @media (max-width:768px) {
+        visibility: hidden;
+    }
 }
 
 // Tag
 .tags-logement {
     display: flex;
     gap: 20px;
-    
 }
+
 .tag-logement {
     background-color: $main-color;
     color: $secondary-color;
@@ -185,6 +194,7 @@ button {
         padding:2px 0;
     }
 }
+
 .collapses-logement {
     display: flex;
     justify-content: space-between;
@@ -196,28 +206,33 @@ button {
         gap: 10px;
         align-items: flex-start;
     }
-}
-.collapse-title {
-    width: 530px;
-    @media (max-width:768px) {
-        width: 100%;
-        font-size: 13px;
+    .collapse {
+        width: 570px;
+        @media (max-width:768px) {
+            width: 100%;   
+            }
     }
-}
-.info {
-    width: 570px;
-    @media (max-width:768px) {
-        width: 100%;
+    .info {
+        width: 570px;
+    }
+    
+    .infoplus {
+        width: 570px;
+        height: auto;
+        @media (max-width: 768px) {
+            width: 95.5%;
+            height: auto;
+        }
+    }
+    .collapse-title{
+        width: 530px;
+        @media (max-width:768px) {
+            width: 89%;
+            font-size: 13px;
+        }
     }
 }
 
-.infoplus {
-    width: 570px;
-    height: 279px;
-    @media (max-width:768px) {
-        width: 100%;
-    }
-}
 .name-host {
     text-align: right;
     margin: 0;

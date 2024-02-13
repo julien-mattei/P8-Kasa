@@ -28,15 +28,27 @@
     color: $secondary-color;
     font-size: 48px;
 }
-
-.collapse {
+.collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 60px;
     @media (max-width:768px) {
         width: 100%;
+    }
+}
+.collapse{
+    @media (max-width:768px) {
+        width: 92%;
     }
 }
 .collapse-title {
     width: 1000px;
     height: 50px;
+
+    @media (max-width:768px) {
+        width: 100%;
+    }
 }
 
 button {
@@ -55,9 +67,16 @@ button {
 .info {
     width: 1040px;
     height: 0px;
+    @media (max-width:768px) {
+        width: 100%;
+    }
 }
 
 .infoplus {
     width: 1040px;
-    height: 150px;
+    height: auto;
+    @media (max-width:768px) {
+        width: 80%;
+        height: auto;
+    }
 }
